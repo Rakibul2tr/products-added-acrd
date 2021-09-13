@@ -18,7 +18,7 @@ const showProducts = (products) => {
       </div>
       <h4>${product.title}</h4>
       <p>Category: ${product.category}</p>
-      <h6 id="point">${product.rating.rate} Rating / ${product.rating.count} Reviwe</h6>
+      <h6 id="point" class="text-warning fw-bold">${product.rating.rate} Rating / ${product.rating.count} Reviwe</h6>
       <h2>Price: $ ${product.price}</h2>
       
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
@@ -113,10 +113,10 @@ const modal = document.getElementById('modal');
       <i class="far fa-star"></i>
       <i class="far fa-star"></i>
       <i class="far fa-star"></i>
-      <span class="ratingpint"> ${ratin} </span>
+      <span class="ratingpint"> ${ratin} Rating</span>
       </p>
       <button type="button" class="btn btn-primary" onclick="modalclos()" >Cancel</button>
-      <span class="text-primary fs-7 ms-2">The Api of This site : &emsp; https://fakestoreapi.com/</span>
+      <span class="text-primary">The Api of This site :&emsp; https://fakestoreapi.com/</span>
     </div>
   </div>
   </div>
