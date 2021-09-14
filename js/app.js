@@ -18,10 +18,10 @@ const showProducts = (products) => {
       </div>
       <h4>${product.title}</h4>
       <p>Category: ${product.category}</p>
-      <h6 id="point" class="text-warning fw-bold">${product.rating.rate} Rating / ${product.rating.count} Reviwe</h6>
-      <h2>Price: $ ${product.price}</h2>
+      <h6 id="point" class="text-warning fw-bold">Rating : ${product.rating.rate} <br><br> Reviwe : ${product.rating.count}</h6>
+      <h2 class="mb-5">Price: $ ${product.price}</h2>
       
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-warning">add to cart</button>
       <button id="details-btn" onclick="ditailbtn(${product.rating.rate},${product.rating.count})" class="btn bg-primary text-white">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
@@ -65,7 +65,7 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = parseFloat(value.toFixed(2));
 };
 
 // update delivery charge and total Tax
@@ -115,8 +115,8 @@ const modal = document.getElementById('modal');
       <i class="far fa-star"></i>
       <span class="ratingpint"> ${ratin} Rating</span>
       </p>
-      <button type="button" class="btn btn-primary" onclick="modalclos()" >Cancel</button>
-      <span class="text-primary">The Api of This site :&emsp; https://fakestoreapi.com/</span>
+      <p class="text-primary">The Api of This site :&emsp; https://fakestoreapi.com/</p>
+ 
     </div>
   </div>
   </div>

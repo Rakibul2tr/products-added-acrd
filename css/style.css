@@ -73,7 +73,7 @@ body {
 }
 .modal-section {
   min-height: 250px;
-  background-color: #000 !important;
+  background-color: whitesmoke!important;
 }
 @media only screen and (max-width: 768px) {
   #all-products {
